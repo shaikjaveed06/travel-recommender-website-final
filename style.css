@@ -1,0 +1,553 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #3498db;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+/* Introduction Section */
+.intro-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    line-height: 1.8;
+}
+
+/* Recommendation Sections */
+.recommendation-section {
+    padding: 3rem 0;
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+.recommendation-section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.recommendation-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recommendation-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.recommendation-card-content {
+    padding: 1.5rem;
+}
+
+.recommendation-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.recommendation-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Personalized Suggestions Section */
+.personalized-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.personalized-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.personalized-section .section-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.preference-selector {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.preference-selector label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.preference-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: white;
+    color: #333;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.preference-select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.suggestions-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.suggestions-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.personalized-results {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+.personalized-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Multimedia Content Section */
+.multimedia-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.multimedia-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.multimedia-card h4 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.video-section {
+    margin-bottom: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.itinerary-section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.itinerary-section h4 {
+    color: #3498db;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.itinerary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.itinerary-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.itinerary-list li:last-child {
+    border-bottom: none;
+}
+
+.itinerary-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.success-message {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+    }
+
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .recommendation-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-section h1,
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 2rem 0;
+    }
+
+    .intro-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .recommendation-section {
+        padding: 2rem 0;
+    }
+
+    .recommendation-card img {
+        height: 200px;
+    }
+
+    .personalized-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .multimedia-card {
+        padding: 1.5rem;
+    }
+
+    .multimedia-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .personalized-title {
+        font-size: 1.5rem;
+    }
+}
+

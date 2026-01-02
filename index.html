@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendations - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Travel Recommendations</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <div class="container">
+                <h1>Discover Your Perfect Travel Destination</h1>
+                <p class="intro-text">
+                    Welcome to our travel recommendation website! We help you discover ideal destinations 
+                    based on your preferences. Whether you're looking for serene beaches, spiritual temples, 
+                    or exploring new countries, we provide personalized recommendations to make your travel 
+                    planning easier and more enjoyable.
+                </p>
+                <p class="intro-text">
+                    Our recommendations are carefully curated to match different travel styles and interests. 
+                    Explore our featured destinations below and find your next adventure!
+                </p>
+            </div>
+        </section>
+
+        <!-- Personalized Suggestions Section -->
+        <section class="personalized-section">
+            <div class="container">
+                <h2>Get Personalized Recommendations</h2>
+                <p class="section-description">
+                    Tell us your travel preferences and we'll suggest the perfect destinations for you!
+                </p>
+                <div class="preference-selector">
+                    <label for="travel-preference">What type of travel experience are you looking for?</label>
+                    <select id="travel-preference" class="preference-select">
+                        <option value="">Select your preference...</option>
+                        <option value="beach">Beach & Relaxation</option>
+                        <option value="temple">Temples & Culture</option>
+                        <option value="country">Country Exploration</option>
+                        <option value="all">Show All Recommendations</option>
+                    </select>
+                    <button id="get-suggestions" class="suggestions-btn">Get My Suggestions</button>
+                </div>
+                <div id="personalized-results" class="personalized-results"></div>
+            </div>
+        </section>
+
+        <!-- Beach Recommendation Section -->
+        <section class="recommendation-section" id="beach-section">
+            <div class="container">
+                <h2>Beach Destinations</h2>
+                <p class="section-description">
+                    Escape to paradise with our handpicked beach destinations. From pristine white sands 
+                    to crystal-clear waters, these beaches offer the perfect setting for relaxation and 
+                    adventure. Whether you seek tranquility or water sports, our beach recommendations 
+                    cater to every beach lover's dream.
+                </p>
+                <div class="recommendation-grid" id="beach-grid">
+                    <!-- Content will be loaded dynamically via JavaScript -->
+                </div>
+                <div class="multimedia-section" id="beach-multimedia">
+                    <!-- YouTube videos and itineraries will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Temple Recommendation Section -->
+        <section class="recommendation-section" id="temple-section">
+            <div class="container">
+                <h2>Temple Destinations</h2>
+                <p class="section-description">
+                    Embark on a spiritual journey with our temple destination recommendations. These 
+                    sacred sites offer a blend of history, architecture, and tranquility. Experience 
+                    the rich cultural heritage and find inner peace at these magnificent temples around 
+                    the world.
+                </p>
+                <div class="recommendation-grid" id="temple-grid">
+                    <!-- Content will be loaded dynamically via JavaScript -->
+                </div>
+                <div class="multimedia-section" id="temple-multimedia">
+                    <!-- YouTube videos and itineraries will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Country-Based Recommendation Section -->
+        <section class="recommendation-section" id="country-section">
+            <div class="container">
+                <h2>Country-Based Recommendations</h2>
+                <p class="section-description">
+                    Explore diverse countries and their unique attractions. Each country offers a 
+                    distinct blend of culture, cuisine, landscapes, and experiences. Discover what 
+                    makes each destination special and plan your next international adventure.
+                </p>
+                <div class="recommendation-grid" id="country-grid">
+                    <!-- Content will be loaded dynamically via JavaScript -->
+                </div>
+                <div class="multimedia-section" id="country-multimedia">
+                    <!-- YouTube videos and itineraries will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Travel Recommendations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
